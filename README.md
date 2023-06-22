@@ -61,8 +61,6 @@ zlib1g-dev libexpat-dev device-tree-compiler
 # Build PiM Simulator
 git clone https://github.com/RohSiHyun/PiMsimulation.git
 cd PiMsimulation/gem5
-export C=clang
-export C++=clang++
 scons build/RISCV/gem5.opt -j 32
 
 # Build Cross compiler
@@ -77,3 +75,8 @@ make -j 32
 # You can see more details by looking into run.sh
 # run.sh builds debug_pim and debug_mem files and you can see the simulation results
 ```
+## Error Handling
+
+If build fails with message "**config/have_deprecated_namespace.hh: No such file or directory**", please modify `gem5/src/base/compiler.hh`
+> 1. delete line 46 (#include "config/have_deprecated_namespace.hh")
+> 2. add new line (#define HAVE_DEPRECATED_NAMESPACE 1)
