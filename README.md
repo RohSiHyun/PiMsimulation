@@ -36,11 +36,14 @@ Figure: Control & Data flow while simlating PiM using Gem5 & Ramulator
 * **src/mem/**
   - **abstract_memory.cc:** abstraction layer for memory models
   - **ramulator.cc:** modified lines in `recvTimingReq` in order to send PIM type request
+* **progs/**
+  - **mem_test.c, pim_test.c, nop_test.c:** test files
 
 ### Cross compiler
 
 * **xcompiler/riscv-opcodes/:** allocating match and mask bits for custom instruction
 * **xcompiler/riscv-gnu-toolchain/:** modify compiler and build it
+
 
 ## Build
 
