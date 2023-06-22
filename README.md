@@ -70,4 +70,10 @@ cd ../xcompiler
 cd riscv-gnu-toolchain
 ./configure --prefix={absolute path for installing cross compiler}
 make -j 32
+
+# Execute simulation
+./run.sh
+
+# You can see more details by looking into run.sh
+# run.sh builds debug_pim and debug_mem files and you can see the simulation results
 ```
