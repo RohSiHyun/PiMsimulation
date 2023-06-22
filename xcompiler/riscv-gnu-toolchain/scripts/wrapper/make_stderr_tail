@@ -1,6 +1,0 @@
-#!/bin/bash
-
-set -o pipefail
-set -e
-
-make "$@" 2>&1 | tail

@@ -1,1 +1,0 @@
-/nfs/home/sihyun.roh/giit/PiMsimulation/gem5/src/cpu/pred/tage_sc_l_8KB.hh

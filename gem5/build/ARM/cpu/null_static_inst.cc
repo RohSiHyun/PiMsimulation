@@ -1,1 +1,0 @@
-/nfs/home/sihyun.roh/giit/PiMsimulation/gem5/src/cpu/null_static_inst.cc

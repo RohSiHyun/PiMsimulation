@@ -1,1 +1,0 @@
-/nfs/home/sihyun.roh/giit/PiMsimulation/gem5/src/dev/arm/fvp_base_pwr_ctrl.hh

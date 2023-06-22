@@ -1,1 +1,0 @@
-/nfs/home/sihyun.roh/giit/PiMsimulation/gem5/src/mem/ruby/system/RubySystem.hh

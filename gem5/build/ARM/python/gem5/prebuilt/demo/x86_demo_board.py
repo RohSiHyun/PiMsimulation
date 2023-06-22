@@ -1,1 +1,0 @@
-/nfs/home/sihyun.roh/giit/PiMsimulation/gem5/src/python/gem5/prebuilt/demo/x86_demo_board.py
