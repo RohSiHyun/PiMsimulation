@@ -1,0 +1,51 @@
+# -*- mode:python -*-
+
+import os
+
+Import('env')
+
+if not os.path.exists(Dir('.').srcnode().abspath + '/Ramulator'):
+    env['HAVE_RAMULATOR'] = False
+    Return()
+
+# We have got the folder, so add the library and build the wrappers
+env['HAVE_RAMULATOR'] = True
+
+# Add the appropriate files. We leave out the trace driven simulator
+dram_files = []
+
+def DRAMFile(filename):
+    dram_files.append(File('Ramulator/src/' + filename))
+
+DRAMFile('Config.cpp')
+DRAMFile('Controller.cpp')
+DRAMFile('DDR3.cpp')
+DRAMFile('DDR4.cpp')
+DRAMFile('GDDR5.cpp')
+DRAMFile('Gem5Wrapper.cpp')
+DRAMFile('HBM.cpp')
+DRAMFile('LPDDR3.cpp')
+DRAMFile('LPDDR4.cpp')
+DRAMFile('MemoryFactory.cpp')
+DRAMFile('SALP.cpp')
+DRAMFile('WideIO.cpp')
+DRAMFile('WideIO2.cpp')
+DRAMFile('TLDRAM.cpp')
+DRAMFile('ALDRAM.cpp')
+
+dramenv = env.Clone()
+dramenv.Append(CXXFLAGS=['-Wno-missing-field-initializers'])
+dramenv.Append(CXXFLAGS=['-Wno-unused-variable'])
+dramenv.Append(CXXFLAGS=['-Wno-reorder'])
+dramenv.Append(CXXFLAGS=['-Isrc'])
+dramenv.Append(CXXFLAGS=['-Ibuild/X86'])
+
+
+# added support to hook in gem5 headers
+dramenv.Append(CPPPATH = Dir('../../src/'))
+
+dramenv.Library('ramulator', [dramenv.SharedObject(f) for f in dram_files])
+
+env.Prepend(CPPPATH=Dir('.'))
+env.Append(LIBS=['ramulator'])
+env.Prepend(LIBPATH=[Dir('.')])

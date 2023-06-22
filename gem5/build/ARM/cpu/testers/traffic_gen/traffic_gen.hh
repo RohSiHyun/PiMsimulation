@@ -1,0 +1,1 @@
+/nfs/home/sihyun.roh/giit/PiMsimulation/gem5/src/cpu/testers/traffic_gen/traffic_gen.hh

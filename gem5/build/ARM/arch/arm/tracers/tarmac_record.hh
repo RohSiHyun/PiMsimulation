@@ -1,0 +1,1 @@
+/nfs/home/sihyun.roh/giit/PiMsimulation/gem5/src/arch/arm/tracers/tarmac_record.hh
