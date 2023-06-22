@@ -58,6 +58,9 @@ sudo apt-get install autoconf automake autotools-dev curl python3 libmpc-dev \
 libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc \
 zlib1g-dev libexpat-dev device-tree-compiler
 
+# unzip files
+tar -zxvf simulation.tar.gz
+
 # Build PiM Simulator
 git clone https://github.com/RohSiHyun/PiMsimulation.git
 cd PiMsimulation/gem5
