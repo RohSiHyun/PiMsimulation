@@ -43,7 +43,8 @@
 
 #include <memory>
 
-#include "config/have_deprecated_namespace.hh"
+//#include "config/have_deprecated_namespace.hh"
+#define HAVE_DEPRECATED_NAMESPACE 1
 
 // http://gcc.gnu.org/onlinedocs/gcc/Function-Attributes.html
 
