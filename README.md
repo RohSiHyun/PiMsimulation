@@ -80,3 +80,5 @@ make -j 32
 If build fails with message "**config/have_deprecated_namespace.hh: No such file or directory**", please modify `gem5/src/base/compiler.hh`
 > 1. delete line 46 (#include "config/have_deprecated_namespace.hh")
 > 2. add new line (#define HAVE_DEPRECATED_NAMESPACE 1)
+
+**This version is uploaded on `NSsolution` branch**
